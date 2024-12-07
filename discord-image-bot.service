@@ -1,0 +1,13 @@
+[Unit]
+Description=Discord Image Bot
+After=network.target
+
+[Service]
+Environment=DISCORD_TOKEN=
+Type=simple
+User=maraz
+WorkingDirectory=/home/maraz/bots/DiscordImageBot
+ExecStart=/usr/bin/node boisPic.js
+
+[Install]
+WantedBy=multi-user.target
